@@ -9,7 +9,7 @@ def fabric_cost(metres, rate_per_metre):
 def piece_cost(metres, rate_per_metre, stitching, overhead):
     """Total cost of one piece."""
     base = fabric_cost(metres, rate_per_metre) + stitching + overhead
-    final_price = round(base * 1.05, 2)  # add 5% GST
+    final_price = round(base * 0.90 * 1.05, 2)  # 10% discount first, then 5% GST
     return final_price
 
 
